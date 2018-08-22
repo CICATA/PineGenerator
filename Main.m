@@ -1,2 +1,4 @@
 p = PineGen();
 
+p.generateRandomBlob();
+
