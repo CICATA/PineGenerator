@@ -86,7 +86,7 @@ classdef PineGen
                             
 
                 j = 0;
-                %hola
+                
                 
                 while (j < obj.generateRandomBetween(10, 20))
                     height = 0.2 + 1.8* rand(1);
