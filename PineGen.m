@@ -10,6 +10,15 @@ classdef PineGen
     end
     
     
+    methods(Static)
+        function main()
+            p = PineGen();            
+            p.generateRandomBlob();            
+            
+        end
+    end
+    
+    
     methods
         
         function im = drawBowl(obj, xc, yc, w, h, height)
@@ -52,10 +61,7 @@ classdef PineGen
         function generateRandomBlob(obj)
             % rng(1)
             i = 0;
-%             figure(1)
-%             clf;
-%             figure(2)
-%             clf;
+            
             n = obj.generateRandomBetween(1, 10);
             
             while (i < n)
@@ -73,7 +79,7 @@ classdef PineGen
                 
                 %variacion en la posicion
                 inc = 5;
-                %incremento tamaño
+                %incremento tamaï¿½o
                 incT = 20;
                 
                 
@@ -104,23 +110,13 @@ classdef PineGen
                 
                 
             end
-                  
+            
             
             imagesc(im)
-%Show mesh and figure for the generatedt image
-%             figure(1)
-%             mesh(im);
-%             
-%             figure(2)
-%             imagesc(im)
-%             drawnow;
-%             
-%             fn = sprintf('im%03d.png',1);
-%             saveas(1,fn);
-%             gn = sprintf('gim%03d.png',1);
-%             saveas(2,gn);
+            
             
         end
+        
         
     end
 end
