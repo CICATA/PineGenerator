@@ -43,21 +43,19 @@ classdef PineGen
             im(linearInd) = Z(ind);
             
             
-            
         end
         
         function x = generateRandomBetween(obj, low, high)
-            
             x =  low + floor((high-low)*rand(1)+0.5);%generateRandomBetween(100, 110);
         end
         
         function generateRandomBlob(obj)
             % rng(1)
             i = 0;
-            figure(1)
-            clf;
-            figure(2)
-            clf;
+%             figure(1)
+%             clf;
+%             figure(2)
+%             clf;
             n = obj.generateRandomBetween(1, 10);
             
             while (i < n)
@@ -78,13 +76,12 @@ classdef PineGen
                 %incremento tamaño
                 incT = 20;
                 
-    
                 
                 j = 0;
                 
                 
                 while (j < obj.generateRandomBetween(5, 10))
-                    height = 0.2 + 1.8* rand(1);
+                    height = 1.4 + 1.8* rand(1);
                     %ovalo azul
                     imj = obj.drawBowl(x + obj.generateRandomBetween(-inc, inc),...
                         y + obj.generateRandomBetween(-inc, inc), ...
@@ -103,22 +100,25 @@ classdef PineGen
                 end
                 
                 
-                figure(1)
-                mesh(im);
-                
-                
-                figure(2)
-                imagesc(im)
-                drawnow;
-                                
                 i = i + 1;
                 
                 
             end
-            fn = sprintf('im%03d.png',1);
-            saveas(1,fn);
-            gn = sprintf('gim%03d.png',1);
-            saveas(2,gn);
+                  
+            
+            imagesc(im)
+%Show mesh and figure for the generatedt image
+%             figure(1)
+%             mesh(im);
+%             
+%             figure(2)
+%             imagesc(im)
+%             drawnow;
+%             
+%             fn = sprintf('im%03d.png',1);
+%             saveas(1,fn);
+%             gn = sprintf('gim%03d.png',1);
+%             saveas(2,gn);
             
         end
         
