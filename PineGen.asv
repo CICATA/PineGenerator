@@ -48,7 +48,7 @@ classdef PineGen
                 while (j < obj.generateRandomBetween(5, 10))
                     height = 1.4 + 1.8* rand(1);
                     %ovalo azul
-                    [imj, minX, minY, maxX, maxY] = obj.drawBowl(x + obj.generateRandomBetween(-inc, inc),...
+                    imj = obj.drawBowl(x + obj.generateRandomBetween(-inc, inc),...
                         y + obj.generateRandomBetween(-inc, inc), ...
                         w + obj.generateRandomBetween(-incT, 0),...
                         h + obj.generateRandomBetween(-incT, 0), height);
@@ -73,7 +73,7 @@ classdef PineGen
         end
         
         
-        function [im, minX, minY, maxX, maxY] = drawBowl(obj, xc, yc, w, h, height)
+        function im, minX, minY = drawBowl(obj, xc, yc, w, h, height)
             
                    
             %initialize the output image
