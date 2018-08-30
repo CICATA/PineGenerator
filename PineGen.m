@@ -27,7 +27,11 @@ classdef PineGen
                 
                 % rng(1)
                 i = 0;
+<<<<<<< Updated upstream
                 n = obj.generateRandomBetween(1, 6);
+=======
+                n = obj.generateRandomBetween(2, 7);
+>>>>>>> Stashed changes
                 B = zeros(n, 4);
                 
                 
